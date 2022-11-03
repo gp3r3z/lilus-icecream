@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lilu's Icecream</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body.debug .container,
+      body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+      }
+
+      body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+      }
+
+      body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <header class="container-fluid">
+      <!-- SECTION  navbar here -->
+      <section class="row bg-primary p-3">
+        <div class="col-12 text-center text-white">
+          <h1>Lilu's IceCream</h1>
+        </div>
+      </section>
+    </header>
+
+    <main class="container-fluid">
+      <section class="row">
+        <div class="col-6 h-50 border border-dark border-3">
+          <!-- SECTION CartView -->
+          <div class="row border-bottom border-success">
+            <!-- SECTION CartView Header -->
+            <div class="col-4">Name</div>
+            <div class="col-2">QTY</div>
+            <div class="col-3">Each</div>
+            <div class="col-3">Total</div>
+          </div>
+          <div class="row p-3" id="line-item">
+            <!-- SECTION CartView Body -->
+            <div class="col-4">Name</div>
+            <div class="col-2">QTY</div>
+            <div class="col-3">Each</div>
+            <div class="col-3">Total</div>
+          </div>
+        </div>
+        <div class="col-6 h-50 border border-dark border-3">
+          <!-- SECTION CartOptions -->
+          <section class="row">
+            <div class="col-12 underline">
+              <h1>IceCream</h1>
+            </div>
+            <div class="col-12 border-danger border">
+              <section id="cream" class="row">
+                <!-- <div class="col-4">
+                  <img
+                    class="img-fluid"
+                    src="https://thiscatdoesnotexist.com/"
+                    alt=""
+                  />
+                  <div class="d-flex justify-content-around">
+                    <p class="col-3">Name</p>
+                    <p class="col-3">Amount</p>
+                  </div>
+                </div> -->
+              </section>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-12 underline">
+              <h1>Vessel</h1>
+            </div>
+            <div class="col-12 border-danger border">
+              <section id="vessel" class="row">
+                <!-- <div class="col-4">
+                  <img
+                    class="img-fluid"
+                    src="https://thiscatdoesnotexist.com/"
+                    alt=""
+                  />
+                  <div class="d-flex justify-content-around">
+                    <p class="col-3">Name</p>
+                    <p class="col-3">Amount</p>
+                  </div>
+                </div> -->
+              </section>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-12 underline">
+              <h1>Toppings</h1>
+            </div>
+            <div class="col-12 border-danger border">
+              <section id="toppings" class="row">
+                <!-- <div class="col-4">
+                  <img
+                    class="img-fluid"
+                    src="https://thiscatdoesnotexist.com/"
+                    alt=""
+                  />
+                  <div class="d-flex justify-content-around">
+                    <p class="col-3">Name</p>
+                    <p class="col-3">Amount</p>
+                  </div>
+                </div> -->
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
