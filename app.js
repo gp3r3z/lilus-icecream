@@ -5,6 +5,13 @@ let iceOptVessel = document.getElementById("vessel")
 let iceOptToppings = document.getElementById("toppings")
 let cartItems = []
 
+
+let total = 0
+// TODO addtional , purchase and clear
+// TODO only one vessel 
+// TODO draw the item to the page
+// TODO create a dictionary 
+
 const iceCream = [{
     name: 'Cookie Dough',
     image: 'https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg',
@@ -152,11 +159,12 @@ function drawlineItem() {
     let template = ''
 
     cartItems.forEach(cartItem => {
+
         template += `
             <div class="col-4" > ${cartItem.name}</div>
             <div class="col-2">${cartItem.qty}</div>
             <div class="col-3">${cartItem.price}</div>
-            <div class="col-3">$10</div>
+            <div class="col-3"></div>
 
        
         `
@@ -174,6 +182,7 @@ function addIceCream(input) {
 
         console.log("Cart empty, adding visual", foundCream.qty)
         foundCream.qty++
+
         cartItems.push(foundCream)
 
 
@@ -183,9 +192,24 @@ function addIceCream(input) {
 
 
     }
+    total = total + foundCream.price
 
     drawlineItem(foundCream)
+    drawTotal()
 
+
+}
+
+function drawTotal() {
+    console.log("Adding Total")
+    let lineElemTotal = document.getElementById('line-total')
+    let template = ''
+
+    template += `
+            <div class="col-3">Total:</div>
+            <div class="col-3">${total}</div>
+        `
+    lineElemTotal.innerHTML = template
 
 }
 function addVessel(input) {
@@ -196,6 +220,7 @@ function addVessel(input) {
 
         console.log("Cart empty, adding visual", foundVes.qty)
         foundVes.qty++
+
         cartItems.push(foundVes)
 
 
@@ -203,10 +228,11 @@ function addVessel(input) {
         console.log("updating QTY", foundVes.name)
         foundVes.qty++
 
-
     }
+    total = total + foundVes.price
 
     drawlineItem(foundVes)
+    drawTotal()
 
 
 
@@ -218,6 +244,7 @@ function addTop(input) {
 
         console.log("Cart empty, adding visual", foundTop.qty)
         foundTop.qty++
+
         cartItems.push(foundTop)
 
 
@@ -227,8 +254,9 @@ function addTop(input) {
 
 
     }
+    total = total + foundTop.price
     drawlineItem(foundTop)
-
+    drawTotal()
 
 }
 
